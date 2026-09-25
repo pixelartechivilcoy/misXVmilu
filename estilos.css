@@ -1,0 +1,278 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables de color */
+:root{
+  --azul-noche:#080D18;
+  --azul-acero:#46566C;
+
+  --plata-oscura:#6F737A;
+  --plata:#BFC3C9;
+  --plata-clara:#E4E7EB;
+  --blanco:#FFFFFF;
+
+  --texto:#080D18;
+}
+
+.title{
+  background: linear-gradient(
+    105deg,
+    #6F737A 0%,
+    #E4E7EB 22%,
+    #FFFFFF 38%,
+    #AEB3BA 52%,
+    #F4F5F6 72%,
+    #777C84 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  text-shadow:
+    0 0 18px rgba(228,231,235,.12);
+}
+
+.subtitle{
+  color:#E4E7EB;
+}
+
+body{
+  background:
+    radial-gradient(
+      circle at center,
+      #202631 0%,
+      #0F1624 45%,
+      #080D18 100%
+    );
+}
+
+@font-face {
+  font-family: 'Allura';
+  src: url('Allura-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('Barlow-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Contenedor principal */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+/* Título principal */
+.title {
+  font-family: 'Allura', cursive;
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  letter-spacing: 0px;
+  font-weight: normal;
+}
+
+/* Subtítulo */
+.subtitle{
+  font-family: 'Barlow', sans-serif;
+  font-size: clamp(1rem, 2.8vw, 1.15rem);
+  letter-spacing: 0.06em;
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+
+/* Botón */
+.enter-btn{
+  background:#C9A35A;
+color:#FAF8F2;
+  border:none;
+
+  padding: 0.7rem 2.4rem;
+  border-radius: 999px;
+
+  font-family: 'Barlow', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.35s ease,
+    color 0.35s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.enter-btn:hover{
+  background:#BFC3C9;
+  color:#080D18;
+
+  transform:translateY(-2px);
+
+  box-shadow:
+    0 8px 25px rgba(191,195,201,.18);
+}
+
+.enter-btn:active{
+  transform: translateY(0);
+  box-shadow: 0 0 0 3px rgba(201,163,90,.35);
+}
+
+.enter-btn:focus-visible{
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(230,164,160,0.35);
+}
+
+
+/* Responsive extra para pantallas muy chicas */
+@media (max-width: 360px) {
+  .hero {
+    gap: 1.2rem;
+  }
+}
+
+@keyframes subirSuave {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.title {
+
+  font-size: clamp(2.2rem, 6vw, 3.5rem);
+  letter-spacing: -0.5px;
+  font-family: 'Allura', cursive;
+  opacity: 0;
+  animation: subirSuave 1.2s ease-out forwards;
+}
+
+.subtitle {
+  font-size: clamp(1rem, 4vw, 1.4rem);
+  line-height: 1.4;
+  max-width: 600px;
+  letter-spacing: 0.5px;
+  font-family: 'Barlow', sans-serif;
+  opacity: 0;
+  animation: subirSuave 1.2s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+.enter-btn{
+  background: transparent;
+  color:#E4E7EB;
+
+  border:1px solid #BFC3C9;
+
+  padding:0.8rem 2.5rem;
+  border-radius:999px;
+
+  font-family:'Barlow', sans-serif;
+  font-size:1rem;
+  letter-spacing:1px;
+
+  cursor:pointer;
+
+  transition:
+    background .35s ease,
+    color .35s ease,
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+
+
+.divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:1.8rem 0;
+}
+
+.divider::before,
+.divider::after{
+    content:"";
+    height:1px;
+      background:#BFC3C9;
+    width:0;
+}
+
+.divider::before{
+    animation:lineaIzquierda .8s ease forwards;
+    animation-delay:.7s;
+}
+
+.divider::after{
+    animation:lineaDerecha .8s ease forwards;
+    animation-delay:.7s;
+}
+
+.divider span{
+    margin:0 18px;
+    color:#FFFFFF;
+
+  text-shadow:
+    0 0 8px rgba(255,255,255,.7),
+    0 0 18px rgba(191,195,201,.45);
+    opacity:0;
+    animation:brilloEstrella .5s ease forwards;
+    animation-delay:1.4s;
+}
+
+@keyframes lineaIzquierda{
+    from{
+        width:0;
+        opacity:0;
+    }
+    to{
+        width:130px;
+        opacity:1;
+    }
+}
+
+@keyframes lineaDerecha{
+    from{
+        width:0;
+        opacity:0;
+    }
+    to{
+        width:130px;
+        opacity:1;
+    }
+}
+
+@keyframes brilloEstrella{
+    0%{
+        opacity:0;
+        transform:scale(.5);
+    }
+
+    60%{
+        transform:scale(1.35);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
+}
