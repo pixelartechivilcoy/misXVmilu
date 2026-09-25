@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis XV Milagros</title>
+
+  <link rel="icon" type="image/png" href="Pixelarte Isologotipo.png">
+
+  <link rel="stylesheet" href="inv.css">
+</head>
+<body>
+
+  <!-- Música -->
+  <audio id="musica" loop>
+    <source src="Shawn Mendes ‒ There's Nothing Holding Me Back (Lyrics).mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Botón música -->
+  <button id="musicToggle" class="music-btn">▶</button>
+
+<section class="foto-portada">
+  <img src="Inicio Web.JPG" class="hero-desktop" alt="Foto de la quinceañera">
+  <img src="Inicio Web.JPG" class="hero-mobile" alt="Foto">
+  <div class="hero-text">
+    <span class="hero-title">MIS XV</span>
+
+<div class="hero-divider">
+    <span>✦</span>
+</div>
+
+<span class="hero-name">Milu</span>
+  </div>
+
+  
+   <!-- CUENTA REGRESIVA -->
+  <div class="countdown-wrapper">
+    <div class="countdown">
+      <div class="time-box">
+        <span id="days">0</span>
+        <small>DÍAS</small>
+      </div>
+      <div class="time-box">
+        <span id="hours">0</span>
+        <small>HORAS</small>
+      </div>
+      <div class="time-box">
+        <span id="minutes">0</span>
+        <small>MINUTOS</small>
+      </div>
+      <div class="time-box">
+        <span id="seconds">0</span>
+        <small>SEGUNDOS</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+ <section class="frase-separador">
+
+    <div class="linea reveal">
+        ✦
+    </div>
+
+    <p class="frase-texto reveal">
+        Hay momentos que se convierten en <br>
+        recuerdos paras siempre.
+    </p>
+
+    <p class="frase-texto reveal">
+        Quiero compartir esta noche tan especial<br>
+        junto a las personas que <span>quiero</span>.
+    </p>
+
+    <div class="linea reveal">
+        ✦
+    </div>
+
+</section>
+
+<section class="section-fecha reveal">
+  <div class="fecha-contenido">
+    
+    <div class="fecha-icono">
+      <img src="Calendario.gif" alt="Calendario">
+    </div>
+
+    <h2 class="fecha-titulo">¿Cuándo?</h2>
+
+    <p class="fecha-texto">
+      08 de Agosto de 2026<br>
+      | 21:30 Hs |
+    </p>
+
+  </div>
+</section>
+
+<section class="donde-section reveal">
+
+  <!-- ICONO (poné tu imagen acá) -->
+  <img src="Ubicacion.gif" alt="Ubicación" class="icono-donde">
+
+  <p class="donde-titulo">¿Dónde?</p>
+
+  <p class="donde-info">
+    Salón Cardo Azul, Roque Pérez <br>
+    Belgrano 336
+  </p>
+
+  <button class="donde-boton" onclick="abrirMapa('fiesta')">
+    VER MAPA
+  </button>
+
+</section>
+<!-- MAPA MODAL -->
+<div id="mapaModal" class="mapa-modal">
+  <div class="mapa-contenido">
+    <button class="mapa-cerrar" onclick="cerrarMapa()"></button>
+    
+   <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3252.2350326056117!2d-59.33684642531262!3d-35.39942437267951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bdbb820960607d%3A0x8598be54814e722d!2sBelgrano%20336%2C%20B7245%20Roque%20P%C3%A9rez%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1790302000370!5m2!1ses-419!2sar"
+  width="600"
+  height="450"
+  style="border:0;"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="strict-origin-when-cross-origin">
+</iframe>
+  </div>
+</div>
+
+<section class="foto-fija-section reveal">
+
+  <div class="foto-fija-container">
+    <img src="1.JPG" alt="">
+  </div>
+
+</section>
+
+<section class="dresscode-section reveal">
+
+  <!-- ICONO (reemplazá src por el tuyo) -->
+  <img src="Diamante.gif" alt="Dress Code" class="dresscode-icono">
+
+  <h2 class="dresscode-titulo">Dress Code</h2>
+
+  <p class="dresscode-tipo">ESTILO LIBRE</p>
+
+  <div class="dresscode-linea"></div>
+
+  <p class="dresscode-aclaracion">
+    Sé vos mismo y vení listo <br>
+    para disfrutar la fiesta.<br>
+    
+  </p>
+
+</section>
+
+<section class="regalo-section reveal">
+
+  <div class="regalo-contenido">
+
+    <!-- ICONO -->
+    <div class="regalo-icono">
+      <img src="Regalo.gif" alt="Regalo">
+    </div>
+
+    <h2 class="regalo-titulo">Regalo</h2>
+
+   <p class="regalo-texto">
+  Tu presencia es mi mejor regalo.<br>
+  Pero si deseás tener un detalle conmigo,<br>
+  en el salón encontrarás una urna disponible.<br>
+</p>
+
+  </section>
+
+<section class="carousel-section carousel-horizontal reveal">
+
+  <div class="carousel-container carousel-hidden">
+
+    <button class="carousel-btn prev" onclick="moveSlide(this, -1)">‹</button>
+<button class="carousel-btn next" onclick="moveSlide(this, 1)">›</button>
+
+
+    <div class="carousel-track">
+      
+      <div class="carousel-item"><img src="2.JPG" alt=""></div>
+      <div class="carousel-item"><img src="3.JPG" alt=""></div>
+       <div class="carousel-item"><img src="4.JPG" alt=""></div>
+      <div class="carousel-item"><img src="2.JPG" alt=""></div>
+      <div class="carousel-item"><img src="3.JPG" alt=""></div>
+       <div class="carousel-item"><img src="4.JPG" alt=""></div>
+       <div class="carousel-item"><img src="2.JPG" alt=""></div>
+      <div class="carousel-item"><img src="3.JPG" alt=""></div>
+       <div class="carousel-item"><img src="4.JPG" alt=""></div>
+       <div class="carousel-item"><img src="2.JPG" alt=""></div>
+      <div class="carousel-item"><img src="3.JPG" alt=""></div>
+       <div class="carousel-item"><img src="4.JPG" alt=""></div>
+       <div class="carousel-item"><img src="2.JPG" alt=""></div>
+      <div class="carousel-item"><img src="3.JPG" alt=""></div>
+       <div class="carousel-item"><img src="4.JPG" alt=""></div>
+       <div class="carousel-item"><img src="2.JPG" alt=""></div>
+      <div class="carousel-item"><img src="3.JPG" alt=""></div>
+       <div class="carousel-item"><img src="4.JPG" alt=""></div>
+       <div class="carousel-item"><img src="2.JPG" alt=""></div>
+      <div class="carousel-item"><img src="3.JPG" alt=""></div>
+       <div class="carousel-item"><img src="4.JPG" alt=""></div>
+       <div class="carousel-item"><img src="2.JPG" alt=""></div>
+      <div class="carousel-item"><img src="3.JPG" alt=""></div>
+       <div class="carousel-item"><img src="4.JPG" alt=""></div>
+       <div class="carousel-item"><img src="2.JPG" alt=""></div>
+      <div class="carousel-item"><img src="3.JPG" alt=""></div>
+       <div class="carousel-item"><img src="4.JPG" alt=""></div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="frase-separador frase-oscura reveal">
+
+  <div class="linea reveal">
+    ✦
+</div>
+
+<p class="frase-texto-oscura reveal">
+    Quiero que esta noche sea un <br>
+    recuerdo que llevemos <span>siempre</span>.
+</p>
+
+<div class="linea reveal">
+    ✦
+</div>
+
+</section>
+<section class="musica-section reveal">
+
+  <img src="Musica.gif" alt="Música" class="musica-icono">
+
+  <h2 class="musica-titulo">Sumá tu canción</h2>
+
+  <p class="musica-texto">
+    Ayudame a crear la playlist<br>
+     de una noche inolvidable.
+  </p>
+
+  <!-- 🎧 VISTA PREVIA SPOTIFY -->
+  <div class="spotify-preview">
+    <iframe
+src="https://open.spotify.com/embed/playlist/6BNANlBzq4NUE1zAoChmsZ?utm_source=generator"
+loading="lazy"
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+</iframe>
+  </div>
+
+  <a
+href="https://open.spotify.com/playlist/6BNANlBzq4NUE1zAoChmsZ"
+  target="_blank"
+  class="musica-boton"
+>
+  AGREGAR CANCIONES
+</a>
+
+</section>
+
+
+<section class="instagram-section reveal">
+
+  <div class="instagram-contenido">
+
+    <!-- ICONO (logo instagram / gif) -->
+    <div class="instagram-icono">
+      <img src="Instagram.gif" alt="Instagram">
+    </div>
+
+    <h2 class="instagram-titulo">Seguime en Instagram</h2>
+
+    <p class="instagram-texto">
+      Compartí tus fotos, videos y recuerdos<br>
+de esta noche tan especial<br>
+      etiquetándome en Instagram.<br>
+    </p>
+
+    <div class="instagram-preview">
+  <img src="Foto Perfil.png" alt="Perfil de Instagram" class="ig-avatar">
+
+  <p class="ig-user">miludelnegro</p>
+
+  <div class="ig-grid">
+    <img src="2.JPG" alt="">
+    <img src="3.JPG" alt="">
+    <img src="4.JPG" alt="">
+  </div>
+</div>
+
+    <a
+  href="https://www.instagram.com/alma.garabento?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+  target="_blank"
+  class="instagram-boton"
+>
+  VER INSTAGRAM
+</a>
+
+  </div>
+
+</section>
+
+<section class="asistencia-section reveal">
+  <p class="asistencia-titulo">Confirmá tú Asistencia</p>
+  <p class="asistencia-fecha">Antes del 3 de Octubre de 2026</p>
+
+  <!-- CANTIDAD (AFUERA DEL CUADRO) -->
+<div class="cantidad-wrapper">
+  <label for="cantidadPersonas" class="label">
+    Número de personas a confirmar
+  </label>
+
+  <select name="entry.540690027" id="cantidadPersonas" required>
+    <option value="">Seleccionar</option>
+    <option value="1">1 persona</option>
+    <option value="2">2 personas</option>
+    <option value="3">3 personas</option>
+    <option value="4">4 personas</option>
+    <option value="5">5 personas</option>
+    <option value="6">6 personas</option>
+    <option value="7">7 personas</option>
+  </select>
+</div>
+
+  <div class="asistencia-card">
+    <form
+  id="asistenciaForm"
+ action="https://docs.google.com/forms/d/e/1FAIpQLScaWDe6LGc5EDMySJJNDjxxg3Fx_kUuYJcb5LtLAADSoxAQAQ/formResponse"
+      method="POST"
+      target="hidden_iframe"
+    >
+   <input
+  type="hidden"
+  name="entry.540690027"
+  id="cantidadHidden"
+/>
+
+<div class="campo campo-radios">
+        <label class="label">¿Asistirás?</label>
+
+        <label class="radio-item">
+          <input type="radio" name="entry.1779840284" value="Confirmo Asistencia" required>
+          <span>¡Confirmo!</span>
+        </label>
+
+        <label class="radio-item">
+          <input type="radio" name="entry.1779840284" value="No podré asistir">
+          <span>No podré asistir</span>
+        </label>
+      </div>
+
+      <!-- Personas extra (2,3,4,5) -->
+<div id="personasExtra"></div>
+
+           <!-- INVITADOS -->
+      <div id="personasContainer"></div>
+
+      <!-- CAMPO OCULTO -->
+     <textarea
+  name="entry.555114571"
+  id="datosFinales"
+  style="display:none;"
+></textarea>
+
+
+      <!-- MENSAJE -->
+      <div class="campo">
+  <label class="label">Mensaje</label>
+
+  <textarea
+    name="entry.1248954764"
+    id="mensaje"
+    placeholder="Escribime lo que quieras 🤍"
+    maxlength="200"
+  ></textarea>
+
+  <small id="contador" style="
+    display:block;
+    margin-top:6px;
+    font-size:0.65rem;
+    letter-spacing:0.12em;
+    color: #BFC3C9;
+    text-align:right;
+  ">
+    180 caracteres restantes
+  </small>
+</div>
+
+    </form>
+
+    <button
+  type="submit"
+  class="asistencia-boton"
+  form="asistenciaForm"
+>
+  ENVIAR RESPUESTA
+</button>
+
+    <iframe name="hidden_iframe" style="display:none;"></iframe>
+
+    <div id="mensajeGracias" class="mensaje-gracias oculto">
+      <p class="mensaje-titulo">¡GRACIAS!</p>
+      <p class="mensaje-texto">Tu respuesta fue enviada correctamente 🤍</p>
+    </div>
+  </div>
+</section>
+
+<section class="calendario-section reveal">
+
+  <div class="calendario-contenido">
+
+    <!-- ICONO -->
+    <div class="calendario-icono">
+      <img src="Sobre.gif" alt="Calendario">
+    </div>
+
+    <h2 class="calendario-titulo">Reservá la Fecha</h2>
+
+    <p class="calendario-texto">
+      Reservá la fecha a tu calendario<br>
+      y preparate para disfrutar<br>
+      una noche inolvidable.
+    </p>
+
+    <a
+href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Mis+XV+Milu&dates=20261024T003000Z/20261025T003000Z&details=Hay+noches+que+se+esperan+durante+mucho+tiempo+y+que+merecen+quedarse+para+siempre+en+el+coraz%C3%B3n.+Quiero+compartir+esta+noche+tan+especial+con+vos+y+que+seas+parte+de+mis+XV.+%E2%9C%A8&location=Sal%C3%B3n+Cardo+Azul,+Belgrano+336,+Roque+P%C3%A9rez,+Buenos+Aires"
+target="_blank"
+class="calendario-boton">
+AGREGAR AL CALENDARIO
+</a>
+
+  </div>
+
+</section>
+
+<section class="frase-separador reveal">
+  <div class="linea reveal">
+    ✦
+</div>
+
+  <p class="frase-texto reveal">
+    La cuenta regresiva ya comenzó...<br>
+    <span>¡Te espero para celebrar juntos!</span>
+</p>
+
+  <div class="linea reveal">
+    ✦
+</div>
+</section>
+
+<section class="foto-espera-section reveal">
+
+  <div class="foto-espera-contenido">
+
+    <!-- FOTO VERTICAL -->
+    <img src="Final.JPG" alt="Jaz" class="foto-espera-img">
+
+    <!-- ICONO -->
+    <img src="Globo.gif" alt="Icono" class="foto-espera-icono">
+
+    <!-- TEXTO -->
+    <p class="foto-espera-texto">Te espero!</p>
+    <p class="foto-espera-nombre">Milagros</p>
+
+  </div>
+
+</section>
+
+  <script src="script.js"></script>
+
+  <footer class="footer">
+
+  <!-- PIXELARTE -->
+  <div class="footer-bloque">
+
+    <p class="footer-label">
+      Diseño e invitación digital
+    </p>
+
+    <div class="footer-contenido">
+
+      <img src="Pixelarte Logotipo.png" alt="Pixelarte" class="footer-logo">
+
+      <div class="footer-redes">
+
+        <a
+          href="https://wa.me/5492345478614"
+          target="_blank"
+          aria-label="WhatsApp"
+          class="footer-icono"
+        >
+          <img src="Whatsapp.png" alt="WhatsApp">
+        </a>
+
+        <a
+          href="https://www.instagram.com/pixelartechivilcoy/"
+          target="_blank"
+          aria-label="Instagram"
+          class="footer-icono"
+        >
+          <img src="Instagram.png" alt="Instagram">
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- FOTÓGRAFO -->
+  <div class="footer-bloque">
+
+    <p class="footer-label">
+      Fotografía
+    </p>
+
+    <div class="footer-contenido">
+
+      <img src="Logo Blanco.png" alt="Fotógrafo" class="footer-logo">
+
+      <div class="footer-redes">
+
+        <a
+          href="https://wa.me/5492345522640"
+          target="_blank"
+          aria-label="WhatsApp"
+          class="footer-icono"
+        >
+          <img src="Whatsapp.png" alt="WhatsApp">
+        </a>
+
+        <a
+          href="https://www.instagram.com/studiotrueba/"
+          target="_blank"
+          aria-label="Instagram"
+          class="footer-icono"
+        >
+          <img src="Instagram.png" alt="Instagram">
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
