@@ -71,7 +71,7 @@ if (heroText && scrollY <= window.innerHeight * 0.9) {
 // ⏳ CUENTA REGRESIVA
 // =======================
 // ⚠️ CAMBIÁ ESTA FECHA POR LA REAL
-const targetDate = new Date("2026-10-24T21:30:00").getTime();
+const targetDate = new Date("2026-10-24T21:00:00").getTime();
 
 const daysEl = document.getElementById("days");
 const hoursEl = document.getElementById("hours");
