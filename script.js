@@ -256,10 +256,22 @@ carousels.forEach(carousel => {
 // generar invitados
 function generarPersonasUI() {
   const container = document.getElementById("personasContainer");
-  const extra = document.getElementById("personasExtra");
-  const selectCantidad = document.getElementById("cantidadPersonas");
+const extra = document.getElementById("personasExtra");
+const selectCantidad = document.getElementById("cantidadPersonas");
 
-  if (!container || !extra || !selectCantidad) return;
+if (!container || !extra || !selectCantidad) return;
+
+const cantidad = parseInt(selectCantidad.value);
+container.innerHTML = "";
+extra.innerHTML = "";
+
+if (!cantidad) return;
+
+const indicacion = document.createElement("p");
+indicacion.className = "cantidad-indicacion";
+indicacion.textContent = `Completá los datos de las ${cantidad} personas que van a asistir.`;
+
+container.appendChild(indicacion);
 
   const cantidad = parseInt(selectCantidad.value);
   container.innerHTML = "";
