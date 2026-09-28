@@ -71,7 +71,7 @@ if (heroText && scrollY <= window.innerHeight * 0.9) {
 // ⏳ CUENTA REGRESIVA
 // =======================
 // ⚠️ CAMBIÁ ESTA FECHA POR LA REAL
-const targetDate = new Date("2026-10-24T21:00:00").getTime();
+const targetDate = new Date("2026-10-24T21:30:00").getTime();
 
 const daysEl = document.getElementById("days");
 const hoursEl = document.getElementById("hours");
@@ -267,34 +267,26 @@ extra.innerHTML = "";
 
 if (!cantidad) return;
 
-const indicacion = document.createElement("p");
-indicacion.className = "cantidad-indicacion";
-indicacion.textContent = `Completá los datos de las ${cantidad} personas que van a asistir.`;
+// Invitado 1 (dentro del cuadro principal)
+container.innerHTML = `
+  <p class="cantidad-indicacion">
+    Completá los datos de las ${cantidad} personas que van a asistir.
+  </p>
 
-container.appendChild(indicacion);
-
-  const cantidad = parseInt(selectCantidad.value);
-  container.innerHTML = "";
-  extra.innerHTML = "";
-
-  if (!cantidad) return;
-
-  // Invitado 1 (dentro del cuadro principal)
-  container.innerHTML = `
-    <div class="campo persona">
-      <label class="label">Invitado 1</label>
-      <input type="text" placeholder="Nombre">
-      <input type="text" placeholder="Apellido">
-      <select class="restriccion">
-        <option value="">Sin restricción</option>
-        <option value="Vegetariana">Vegetariana</option>
-        <option value="Vegana">Vegana</option>
-        <option value="Sin TACC">Sin TACC</option>
-        <option value="Sibo">Sibo</option>
-        <option value="Otro">Otro</option>
-      </select>
-    </div>
-  `;
+  <div class="campo persona">
+    <label class="label">Invitado 1</label>
+    <input type="text" placeholder="Nombre">
+    <input type="text" placeholder="Apellido">
+    <select class="restriccion">
+      <option value="">Sin restricción</option>
+      <option value="Vegetariana">Vegetariana</option>
+      <option value="Vegana">Vegana</option>
+      <option value="Sin TACC">Sin TACC</option>
+      <option value="Sibo">Sibo</option>
+      <option value="Otro">Otro</option>
+    </select>
+  </div>
+`;
 
   // Invitados 2+
   for (let i = 2; i <= cantidad; i++) {
