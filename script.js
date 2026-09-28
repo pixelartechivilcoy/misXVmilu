@@ -322,13 +322,18 @@ const mensajeGracias = document.getElementById("mensajeGracias");
 
 if (form && mensajeGracias) {
   form.addEventListener("submit", function () {
-    actualizarInvitadosHidden(); // 🔥 CLAVE
+    actualizarInvitadosHidden();
 
     setTimeout(() => {
       form.style.display = "none";
       mensajeGracias.classList.remove("oculto");
     }, 300);
   });
+}
+
+function cerrarMensajeGracias() {
+  mensajeGracias.classList.add("oculto");
+  form.style.display = "";
 }
 
 
