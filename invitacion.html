@@ -407,9 +407,25 @@ de esta noche tan especial<br>
     <iframe name="hidden_iframe" style="display:none;"></iframe>
 
     <div id="mensajeGracias" class="mensaje-gracias oculto">
-      <p class="mensaje-titulo">¡GRACIAS!</p>
-      <p class="mensaje-texto">Tu respuesta fue enviada correctamente 🤍</p>
-    </div>
+  <div class="mensaje-gracias-contenido">
+
+    <button
+      type="button"
+      class="mensaje-gracias-cerrar"
+      onclick="cerrarMensajeGracias()"
+      aria-label="Cerrar"
+    >
+      ×
+    </button>
+
+    <p class="mensaje-titulo">¡GRACIAS!</p>
+
+    <p class="mensaje-texto">
+      Tu respuesta fue enviada correctamente 🤍
+    </p>
+
+  </div>
+</div>
   </div>
 </section>
 
