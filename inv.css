@@ -2904,3 +2904,80 @@ background:#C9A35A;
   text-align: center;
   color: var(--plata-clara);
 }
+
+/* ==============================
+   MENSAJE DE CONFIRMACIÓN
+   ============================== */
+
+.mensaje-gracias {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(8, 13, 24, 0.72);
+  backdrop-filter: blur(5px);
+
+  padding: 24px;
+}
+
+.mensaje-gracias.oculto {
+  display: none;
+}
+
+.mensaje-gracias-contenido {
+  position: relative;
+
+  width: min(90%, 480px);
+  padding: 55px 35px 45px;
+
+  background: #080D18;
+  border: 1px solid #BFC3C9;
+  border-radius: 4px;
+
+  text-align: center;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.mensaje-gracias-cerrar {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+
+  width: 38px;
+  height: 38px;
+
+  border: none;
+  background: transparent;
+
+  color: #E4E7EB;
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.mensaje-gracias-cerrar:hover {
+  color: #FFFFFF;
+}
+
+.mensaje-titulo {
+  margin: 0 0 18px;
+
+  color: #FFFFFF;
+  font-size: 1.8rem;
+  letter-spacing: 0.08em;
+}
+
+.mensaje-texto {
+  margin: 0;
+
+  color: #BFC3C9;
+  font-size: 1rem;
+  line-height: 1.7;
+}
